@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "273914088572",
+    "firebase_url": "https://lkuber-bba6a.firebaseio.com",
+    "project_id": "lkuber-bba6a",
+    "storage_bucket": "lkuber-bba6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:273914088572:android:6523081371e97089",
+        "android_client_info": {
+          "package_name": "com.example.usmankhan.lkuber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "273914088572-1p9rbdl4h17lclol2k43a98sb176fqn8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.usmankhan.lkuber",
+            "certificate_hash": "3e0df501f1477df354dbd20c49da1cc85700136a"
+          }
+        },
+        {
+          "client_id": "273914088572-qeu7vho06vihhombhd1ui4sidguorreg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRG2usShgzOwJaah1m7Q8gvhfLRqlvoAA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "273914088572-qeu7vho06vihhombhd1ui4sidguorreg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
