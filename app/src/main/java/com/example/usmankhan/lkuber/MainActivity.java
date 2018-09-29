@@ -29,6 +29,15 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
         } );
+        mcustomer.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( MainActivity.this, CustomerLogin.class );
+                startActivity( intent );
+                finish();
+                return;
+            }
+        } );
 
     }
 }
