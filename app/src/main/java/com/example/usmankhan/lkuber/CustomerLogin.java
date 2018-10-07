@@ -44,11 +44,11 @@ public class CustomerLogin extends AppCompatActivity {
             }
         };
 
-        memail = (EditText) findViewById( R.id.email );
-        mpassword = (EditText) findViewById( R.id.password );
+        memail = (EditText) findViewById( R.id.cemail );
+        mpassword = (EditText) findViewById( R.id.cpassword );
 
-        mlogin = (Button) findViewById( R.id.login );
-        mregister = (Button) findViewById( R.id.register );
+        mlogin = (Button) findViewById( R.id.clogin );
+        mregister = (Button) findViewById( R.id.cregister );
 
         mregister.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -82,7 +82,9 @@ public class CustomerLogin extends AppCompatActivity {
 
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-
+                        if (!task.isSuccessful()) {
+                            Toast.makeText( CustomerLogin.this, "sign in error", Toast.LENGTH_SHORT ).show();
+                        }
                     }
                 } );
             }
