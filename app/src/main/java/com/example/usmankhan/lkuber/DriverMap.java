@@ -85,16 +85,17 @@ public class DriverMap extends FragmentActivity implements OnMapReadyCallback, G
 
     @Override
     public void onLocationChanged(Location location) {
-        mLastLocation = location;
-        LatLng latLng = new LatLng( location.getLatitude(), location.getLongitude() );
-        mMap.moveCamera( CameraUpdateFactory.newLatLng( latLng ) );
-        mMap.animateCamera( CameraUpdateFactory.zoomTo( 11f ) );
+        if (getApplicationContext() != null) {
+            mLastLocation = location;
+            LatLng latLng = new LatLng( location.getLatitude(), location.getLongitude() );
+            mMap.moveCamera( CameraUpdateFactory.newLatLng( latLng ) );
+            mMap.animateCamera( CameraUpdateFactory.zoomTo( 11f ) );
 
-        String userid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference( "driversAvailable" );
-        GeoFire fire = new GeoFire( reference );
-        fire.setLocation( userid, new GeoLocation( location.getLatitude(), location.getLongitude() ) );
-
+            String userid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference( "driversAvailable" );
+            GeoFire fire = new GeoFire( reference );
+            fire.setLocation( userid, new GeoLocation( location.getLatitude(), location.getLongitude() ) );
+        }
     }
 
     @Override
