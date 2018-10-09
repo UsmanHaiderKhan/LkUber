@@ -16,6 +16,7 @@ import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -48,7 +49,7 @@ public class CustomerMap extends FragmentActivity implements OnMapReadyCallback,
         mapFragment.getMapAsync( this );
 
         logoutbtn = (Button) findViewById( R.id.logout );
-        requestbtn = (Button) findViewById( R.id.register );
+        requestbtn = (Button) findViewById( R.id.request );
 
         logoutbtn.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -102,7 +103,7 @@ public class CustomerMap extends FragmentActivity implements OnMapReadyCallback,
         mLastLocation = location;
         LatLng latLng = new LatLng( location.getLatitude(), location.getLongitude() );
         mMap.moveCamera( CameraUpdateFactory.newLatLng( latLng ) );
-        mMap.animateCamera( CameraUpdateFactory.zoomTo( 11 ) );
+        mMap.animateCamera( CameraUpdateFactory.zoomTo( 11f ) );
     }
 
     @Override
