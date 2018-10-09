@@ -100,12 +100,13 @@ public class CustomerMap extends FragmentActivity implements OnMapReadyCallback,
 
     @Override
     public void onLocationChanged(Location location) {
-        mLastLocation = location;
-        LatLng latLng = new LatLng( location.getLatitude(), location.getLongitude() );
-        mMap.moveCamera( CameraUpdateFactory.newLatLng( latLng ) );
-        mMap.animateCamera( CameraUpdateFactory.zoomTo( 11f ) );
+        if (getApplicationContext() != null) {
+            mLastLocation = location;
+            LatLng latLng = new LatLng( location.getLatitude(), location.getLongitude() );
+            mMap.moveCamera( CameraUpdateFactory.newLatLng( latLng ) );
+            mMap.animateCamera( CameraUpdateFactory.zoomTo( 11f ) );
+        }
     }
-
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         mlocationrequest = new LocationRequest();
