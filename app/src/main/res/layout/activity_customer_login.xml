@@ -8,27 +8,27 @@
     android:orientation="vertical">
 
     <EditText
+        android:id="@+id/cemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:id="@+id/email" />
+        android:hint="Email" />
 
     <EditText
+        android:id="@+id/cpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:id="@+id/password" />
+        android:hint="Password" />
 
     <Button
+        android:id="@+id/clogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:id="@+id/login" />
+        android:text="Login" />
 
     <Button
+        android:id="@+id/cregister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registration"
-        android:id="@+id/register" />
+        android:text="Registration" />
 
 </LinearLayout>
